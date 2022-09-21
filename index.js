@@ -76,13 +76,17 @@ const printCards = (characters) => {
   });
 };
 
+
+
 const cleanCardContainer = () => {
   characterContainer.innerHTML = "";
 };
 
+
+
 /* SELECT */
 
-const getOptions = () => {
+function getOptions() {
   const options = {
     gender: [],
     status: [],
@@ -98,7 +102,7 @@ const getOptions = () => {
   });
 
   return options;
-};
+}
 
 const createOptionNodes = (filterOptions, appendToElement) => {
   // select all
@@ -238,3 +242,5 @@ search.addEventListener("input", createCards);
 for (const filter in filterMap) {
   filterMap[filter].addEventListener("input", createCards);
 }
+
+createCards();
